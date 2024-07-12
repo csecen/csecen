@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Secen</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  .jumbotron {
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #1abc9c;
+    top: 50%;
+  }
+  .carousel-indicators li {
+    width: 15px;
+    height: 15px;
+    border-color: #1abc9c;
+  }
+  .carousel-indicators li.active {
+    width: 15px;
+    height: 15px;
+    background-color: #1abc9c;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #1abc9c;
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-heading {
+    color: #fff !important;
+    /* background-color: #1abc9c !important; */
+    background-color: #474e5d !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: #474e5d;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #1abc9c !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #1abc9c;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#myPage">HOME</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#education">EDUCATION</a></li>
+        <li><a href="#work">WORK</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Connor Secen</h1>
+  <p>Software Developer</p>
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-10">
+      <h1>About Me</h1><br>
+      <h3>Welcome to my webpage. Here you will find some information about me including my interests both in and out of my career, as well as my education and my work experience over the years.</h3><br>
+      <h4>I am a software developer and aspiring machine learning engineer. I recently began my career as a software developer for Leidos. I am a member of the Atlassian
+        tools team, providing support for multiple development teams on our contract using the Atlassian products. I have also had a few internships with a wide
+        range of repsonsibility from testing, to helping write scripts and tools, to web development. I have learned a great deal from all my experiences hope to use all
+        the knowledge I gain to help further my career.</h4>
+      <h4>Outside of work, I also enjoy using what I've learned to aid in personal projects. One project that I am currently working on is a surf forecasting dashboard
+        written in Python. It is built using the Plotly Dash framework scraping various websites to find current and forecasted weather conditions to help predict surf.
+        The dashboard offers and easily digestable format for viewing the conditions for multiple locations easily and efficently. Another project I'm working on is a project
+        that analyzes professional surfers wave scores and counts, to try to learn more about what could give surfers an edge in contests. I also enjoy working on smaller
+        projects such as writing a genetic algorithm to solve any size, regular sudoku board.</h4>
+      <h4>Aside from programming I enjoy staying physically active. I am an avid surfer, I enjoy paddle boarding, biking, skiing, playing volleyball, and exercising.</h4>
+    </div>
+
+    <img src="Selection_009.png" class="img-circle" width="200" height="200">
+  </div>
+  <br>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-2">
+      <!-- RESUME -->
+      <h4><a href="./Resume.pdf" data-toggle="tooltip" title="Resume"><img src="https://img.icons8.com/material-rounded/48/000000/resume.png"></a></h4>
+    </div>
+    <div class="col-sm-2">
+      <!-- Github -->
+      <h4><a href="https://github.com/csecen" data-toggle="tooltip" title="Github"><img src="https://img.icons8.com/color/48/000000/github--v1.png"></a></h4>
+    </div>
+    <div class="col-sm-2">
+      <!-- AWS -->
+      <h4><a href="./AWS Certified Developer - Associate certificate.pdf" data-toggle="tooltip" title="AWS Certificate"><img src="https://img.icons8.com/color/48/000000/amazon-web-services.png"></a></h4>
+    </div>
+    <div class="col-sm-2">
+      <!-- LinkedIn -->
+      <h4><a href="https://www.linkedin.com/in/connor-secen" data-toggle="tooltip" title="LinkedIn"><img src="https://img.icons8.com/color/52/000000/linkedin.png"></a></h4>
+    </div>
+    <div class="col-sm-2">
+      <!-- AngelList -->
+      <h4><a href="https://angel.co/connor-secen" data-toggle="tooltip" title="AngelList"><img src="https://img.icons8.com/ios/50/000000/angelist.png"></a></h4>
+    </div>
+  </div>
+</div>
+
+<div id="education" class="container-fluid bg-grey">
+  <div class="row">
+    <div class="row">
+      <div class="col-sm-2">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Maryland_Terrapins_logo.svg/125px-Maryland_Terrapins_logo.svg.png" width="150" height="150">
+      </div>
+      <div class="col-sm-8">
+        <h2>Education</h2><br>
+        <h4>I am a recent graduate from the University of Maryland, with a B.S. in Computer Science. My first introduction to programming was at
+          Montgomery College (my local community college). Here I took a few programming courses, focused in Java and object oriented programming, and
+          discrete mathematics.</h4>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-10">
+        <h4>After earning my Associate Degree from Montgomery College, I transfered to the University of Maryland, continuing my studies in computer science. While
+          at Maryland, I took many courses including Data Structures, Intro to Data Science, Machine Learning, Networks and Security, and Algorithms. Along with
+          my computer science classes, I also took many classes with the Economics department as part of my upper level concentration. While in school, my favorite
+          classes were Intro to Data Science and Machine Learning.</h4>
+        <h4>Because of my love for the field I have decided to continue my education by pursuing a Masters Degree in Artificial Intelligence and Machine Learning
+          at Drexel University. Here I will have the opportunity to learn a variety of subjects related to the field and apply them to my work place.</h4>
+      </div>
+      <div class="col-sm-2">
+        <img src="https://drexel.edu/~/media/Images/identity/athletics/athletics_D1.ashx?la=en" width="200" height="200">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="work" class="container-fluid text-center">
+  <h2>Work Experience</h2>
+  <div id="myCarousel" class="carousel slide text-center" data-interval="false" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+      <div class="item active">
+        <div>
+          <div class="panel panel-default text-center">
+            <div class="panel-heading">
+              <h1>Leidos</h1>
+            </div>
+            <div class="panel-body">
+              <img src="https://ballparkbiz.files.wordpress.com/2015/04/leidos-logo.jpg" class="w3-image" width="10%"/>
+              <br>
+              <br>
+              <br>
+              <p><strong>Position:</strong> Software Developer</p>
+          	  <p><strong>Dates Employed:</strong> July 2019 - Present</p>
+              <p><strong>Description:</strong></p>
+              <p>Leidos is a government contractor, providing IT support in many fields. At the company, I work as a software developer on a small team that supports other teams using Atlassian products.</p>
+			        <p><strong>Tasks:</strong></p>
+              <ul>
+                <li>Write scripts to run analysis on the Atlassian tools</li>
+                <li>Migrate data between various data sources into Atlassian products</li>
+                <li>Upgrade applications written in VB6 to the more modern Visual Basic 2019</li>
+              </ul>
+              <br>
+              <br>
+              <h3><a href="https://www.leidos.com/">Visit Site</a></h3>
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+        </div>
+	  </div>
+
+      <div class="item">
+        <div>
+          <div class="panel panel-default text-center">
+            <div class="panel-heading">
+              <h1>ICG Solutions</h1>
+            </div>
+            <div class="panel-body">
+              <img src="https://ctovision.com/wp-content/uploads/ICG_logo1.png" class="w3-image" width="10%"/>
+              <br>
+              <br>
+              <br>
+              <p><strong>Position:</strong> Data Science Intern</p>
+          	  <p><strong>Dates Employed:</strong> January 2017 - June 2019</p>
+              <p><strong>Description:</strong></p>
+              <p>ICG Solutions is a software development company, who's main product is a real time data analytics software. The software uses "rules" written by the user in order to find and analyze data in real time, without the need to store any large amounts of data. The company is still small and because of this, my tasks varried greatly depending on what needed doing when. However, in all the tasks I worked in a team of about three people in order to solve problems or test the software.</p>
+			        <p><strong>Tasks:</strong></p>
+              <ul>
+                <li>Ad hoc testing of the software using JIRA</li>
+                <li>Assist in transfering software across servers</li>
+                <li>Complete full installation of the software through command line</li>
+                <li>Assist with the creation of a Twitter scraping tool written in python</li>
+              </ul>
+              <br>
+              <br>
+              <h3><a href="http://www.icgsolutions.com/">Visit Site</a></h3>
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+        </div>
+	  </div>
+
+      <div class="item">
+        <div>
+          <div class="panel panel-default text-center">
+            <div class="panel-heading">
+              <h1>DigiPops.tv</h1>
+            </div>
+            <div class="panel-body">
+              <img src="./tumblr_inline_nwmpbmxsSL1sxfwud_500.jpg" class="w3-image" width="25%"/>
+              <br>
+              <br>
+              <br>
+              <p><strong>Position:</strong> Cloud Function Consultant</p>
+          	  <p><strong>Dates Employed:</strong> Feburary 2019 - May 2019</p>
+              <p><strong>Description:</strong></p>
+              <p>DigiPops.tv is an online film festival serving a major population of short film makers who struggle getting their films into the larger, well established film festivals. Most of their site in hosted in Google's cloud. My main duty while working with the company was focused on Google's Firestore database.</p>
+			        <p><strong>Tasks:</strong></p>
+              <ul>
+                <li>Connect Reactadmin backend system to Firestore database</li>
+                <li>Write Python scripts to both create and transfer mock data to Firestore</li>
+                <li>Add react components to admin system</li>
+                <li>Post code to Gitlab for CI/CD and use Trello board to manage tasks</li>
+              </ul>
+              <br>
+              <br>
+              <h3><a href="http://www.digipops.tv/">Visit Site</a></h3>
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="item">
+	  	<div>
+          <div class="panel panel-default text-center">
+            <div class="panel-heading">
+              <h1>IBBR</h1>
+            </div>
+            <div class="panel-body">
+              <img src="https://www.nist.gov/sites/default/files/images/2017/08/14/ibbr_logo_short.fw_.png" class="w3-image" width="25%"/>
+              <br>
+              <br>
+              <br>
+              <p><strong>Position:</strong> Web Development Intern/IT Technician</p>
+          	  <p><strong>Dates Employed:</strong> May 2018 - September 2018</p>
+              <p><strong>Description:</strong></p>
+              <p>The Institute for Bioscience and Biotechnology Research is a research institute associated with the University of Maryland, located at the University of Shady Grove campus, in Rockville, MD. For the institute, my job was with the IT department with a focus in web development. The institute is currently looking at updating the website, and had me and a fellow intern do a proof of concept for a site written using Django and Vue.js.</p>
+			        <p><strong>Tasks:</strong></p>
+              <ul>
+                <li>Learn the Django API Framework</li>
+                <li>Build a ticketing site for the IT department</li>
+                <li>Assist staff with IT related issues</li>
+                <li>Set up for events at the campus</li>
+              </ul>
+              <br>
+              <br>
+              <h3><a href="https://www.ibbr.umd.edu/">Visit Site</a></h3>
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+        </div>
+	  </div>
+
+      <div class="item">
+	  	  <div>
+          <div class="panel panel-default text-center">
+            <div class="panel-heading">
+              <h1>Silver Palm Technologies</h1>
+            </div>
+            <div class="panel-body">
+              <img src="http://silverpalmtech.com/wp-content/uploads/2015/05/heading1.png" class="w3-image" width="40%"/>
+              <br>
+              <br>
+              <br>
+              <p><strong>Position:</strong> Electrical Technician</p>
+          	  <p><strong>Dates Employed:</strong> March 2016 - August 2016</p>
+              <p><strong>Description:</strong></p>
+              <p>Silver Palm Technologies is a small hardware company focusing on SIGINT products. They provide customer-focused engineering services and products to both government and commercial communities. My tasks with the company varried, but focused heavily on manufactoring and testing the products.</p>
+			        <p><strong>Tasks:</strong></p>
+              <ul>
+                <li>Build RF/IF recievers</li>
+                <li>Manufacture components used in recievers</li>
+                <li>Test radios to check that they are producing proper output using spectrum analyzers, oscilloscopes and more</li>
+              </ul>
+              <br>
+              <br>
+              <h3><a href="https://silverpalmtech.com/">Visit Site</a></h3>
+              <br>
+              <br>
+              <br>
+            </div>
+          </div>
+        </div>
+	  </div>
+
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5">
+      <h3>If you'd like to learn more, please feel free to contact me!</h3>
+    </div>
+    <form id="gfrom" method="POST" class="pure-form pure-form-stacked" action="https://script.google.com/macros/s/AKfycbyCS4Izpm1gvuDElvXxzi0BMCn-xuZaQQkfqOFEJA/exec">
+      <div class="col-sm-7 slideanim">
+        <div class="row">
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+          </div>
+          <div class="col-sm-6 form-group">
+            <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          </div>
+        </div>
+        <textarea class="form-control" id="message" name="comments" placeholder="Comment" rows="5"></textarea><br>
+        <div class="row">
+          <div class="col-sm-12 form-group">
+            <button class="btn btn-default pull-right" type="submit">Send</button>
+          </div>
+        </div>
+      </div>
+  </form>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="./MVIMG_20190719_081304.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+
+<footer class="container-fluid text-center bg-grey">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>THANK YOU FOR VISITING</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+<script data-cfasync="false" type="text/javascript"
+src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
+
+</body>
+</html>
